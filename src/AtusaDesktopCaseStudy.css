@@ -1,0 +1,59 @@
+/* ATUSA Desktop App case study additions (base styles come from iSonoHealthCaseStudy.css) */
+.atusa-case-study .hero-image-section.isono-hero {
+  background: #14162b;
+}
+
+.atusa-case-study .hero-image-container {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.atusa-case-study .hero-image-container img {
+  width: 100%;
+  max-height: none;
+}
+
+.atusa-meta {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.atusa-video {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 24px auto 0;
+  border-radius: 12px;
+  background: #000;
+}
+
+.atusa-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.atusa-process-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 12px 0 8px;
+}
+
+.atusa-process-item p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.atusa-outcomes {
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .atusa-process-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1934 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background-color: #fafafa;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Header Styles */
+.header {
+  padding: 80px 0 100px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.header-content {
+  max-width: 900px;
+}
+
+.name {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.7;
+  opacity: 0.8;
+  max-width: 700px;
+}
+
+/* CONTACT INFO STYLING */
+.header .container .header-content .contact-info.portfolio-contact-override,
+.portfolio-contact-override {
+  background: rgba(224, 247, 255, 0.95) !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  margin-bottom: 20px !important;
+}
+
+.header .container .header-content .contact-info.portfolio-contact-override *,
+.header .container .header-content .contact-info.portfolio-contact-override span,
+.header .container .header-content .contact-info.portfolio-contact-override a,
+.portfolio-contact-override *,
+.portfolio-contact-override span,
+.portfolio-contact-override a {
+  color: #1a1a1a !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+.header .container .header-content .contact-info.portfolio-contact-override a:hover,
+.portfolio-contact-override a:hover {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+  transition: all 0.2s ease !important;
+}
+
+.header .portfolio-contact-override {
+  color: #1a1a1a !important;
+}
+
+.portfolio-contact-override svg {
+  color: #1a1a1a !important;
+}
+
+/* Work Section */
+.work-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Projects Grid - Responsive Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Project Card Styles */
+.project-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.project-card.clickable {
+  cursor: pointer;
+}
+
+.project-card.clickable:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+/* Project Images */
+.project-image-container {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 50%;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.1);
+}
+
+.view-case-study {
+  width: auto;
+  padding: 16px 28px;
+  border-radius: 12px;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Project Content */
+.project-content {
+  padding: 48px;
+  position: relative;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.project-title-section {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+.project-subtitle {
+  font-size: 20px;
+  color: #666;
+  font-weight: 400;
+}
+
+.project-year {
+  font-size: 16px;
+  color: #999;
+  font-weight: 500;
+  margin-left: 16px;
+}
+
+.project-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+}
+
+.project-arrow {
+  position: absolute;
+  bottom: 48px;
+  right: 48px;
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+  color: #667eea;
+  transform: translate(6px, -6px);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 70px 0;
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.contact-content p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.contact-link:not(.secondary) {
+  background: white;
+  color: #1a1a1a;
+}
+
+.contact-link:not(.secondary):hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+.contact-link.secondary {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-link.secondary:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Case Study Styles */
+.case-study-container {
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+/* Navigation */
+.case-study-nav {
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #667eea;
+}
+
+/* Hero Section */
+.hero-image-section {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-container {
+  max-width: 1200px;
+  width: 85%;
+  height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: white;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 500px;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 48px 0 24px 0;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.content-section h2:first-of-type {
+  margin-top: 0;
+  text-align: center;
+}
+
+.content-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 32px 0 16px 0;
+  color: #1a1a1a;
+}
+
+.content-section p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.content-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-main h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 48px 0 24px 0;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.content-main h2:first-child {
+  margin-top: 0;
+  text-align: center;
+}
+
+.content-main h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 32px 0 16px 0;
+  color: #1a1a1a;
+}
+
+.content-main p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.content-main ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.content-main li {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.project-details-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.detail-value {
+  color: #1a1a1a;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.alt-bg {
+  background: white;
+}
+
+/* Additional Case Study Sections */
+.system-overview-section,
+.user-interface-section,
+.creativity-analysis-section,
+.similarity-patterns-section,
+.interaction-behavior-section,
+.thematic-analysis-section,
+.educational-impact-section,
+.technical-contribution-section {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.prototype-image {
+  margin: 24px 0;
+}
+
+.prototype-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.image-caption {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Image Variations */
+.hero-image-container-csp {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  border: none;
+  background: white;
+}
+
+.hero-image-container-csp img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 600px;
+}
+
+.system-arch-image img {
+  width: 80% !important;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.medium-image img {
+  width: 70% !important;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.smaller-image img {
+  width: 60% !important;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.small-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Study Components */
+.study-overview-highlight {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0;
+  border: 1px solid #e0e8ff;
+}
+
+.study-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-item {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.study-task {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.study-task h4 {
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.study-task p {
+  color: #666;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Grids and Cards */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.method-card {
+  background: #f8f9ff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+}
+
+.method-icon {
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.method-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.method-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Theme and Analysis Cards */
+.creativity-intro,
+.pattern-intro,
+.behavior-intro,
+.education-intro,
+.tech-intro {
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border-left: 4px solid #667eea;
+}
+
+.creativity-intro p,
+.pattern-intro p,
+.behavior-intro p,
+.education-intro p,
+.tech-intro p {
+  margin: 0;
+  font-size: 18px;
+  color: #000000;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.creativity-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.creativity-type-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid;
+}
+
+.creativity-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.creativity-type-card.combinatorial {
+  border-top-color: #667eea;
+}
+
+.creativity-type-card.exploratory {
+  border-top-color: #f093fb;
+}
+
+.creativity-type-card.transformational {
+  border-top-color: #4facfe;
+}
+
+.creativity-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creativity-type-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.creativity-type-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* Additional Components */
+.findings-summary {
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8faff;
+  border-left: 4px solid #667eea;
+  border-radius: 8px;
+}
+
+.findings-summary h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.findings-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.findings-summary li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  color: #000000;
+  font-weight: 500;
+}
+
+.findings-summary li:last-child {
+  border-bottom: none;
+}
+
+/* Cluster Analysis */
+.cluster-analysis {
+  margin-top: 32px;
+}
+
+.cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.cluster-card {
+  background: #f8f9ff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+.cluster-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.cluster-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Theme Cards */
+.theme-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.theme-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.theme-icon {
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.theme-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.theme-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.theme-card p:last-child {
+  font-style: normal;
+  margin: 0;
+}
+
+/* Educational Impact */
+.education-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.application-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.application-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.application-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.application-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.education-quote {
+  background: #f0f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  margin: 32px 0;
+  border-left: 4px solid #3b82f6;
+}
+
+.education-quote blockquote {
+  font-size: 18px;
+  font-style: italic;
+  color: #1e40af;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+.education-quote cite {
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Impact Metrics */
+.impact-metrics {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.metric-card-accessible {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+}
+
+.metric-card-accessible h4 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.metric-card-accessible p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Research Contributions */
+.research-contributions {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contribution-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 24px;
+}
+
+.contribution-card:last-child {
+  margin-bottom: 0;
+}
+
+.contribution-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.contribution-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Future Directions */
+.future-directions {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.future-card {
+  background: #f8f9ff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+.future-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.future-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px !important;
+  }
+  
+  /* Force hide ALL decorative elements and large containers on mobile */
+  .header *:not(.name):not(.title):not(.description):not(.container):not(.header-content):not(img) {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .header svg,
+  .header circle,
+  .header ellipse,
+  .header path,
+  .header rect,
+  .header-content svg,
+  .header-content circle,
+  .header-content ellipse,
+  .header-content path,
+  .header-content rect {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  /* Aggressively override header layout on mobile */
+  .header {
+    padding: 20px 0 30px !important;
+    text-align: center !important;
+  }
+  
+  .header-content {
+    max-width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  
+  .header-main {
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 0px !important;
+    width: 100% !important;
+  }
+  
+  /* Aggressively target profile image container */
+  .profile-image,
+  .header .profile-image,
+  .header-content .profile-image,
+  .header-main .profile-image {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 10px auto !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: block !important;
+  }
+  
+  /* Aggressively target the actual image */
+  .profile-image img,
+  .header img,
+  .header-content img,
+  .header-main img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 100 !important;
+  }
+  
+  .header-text {
+    text-align: center !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+  
+  /* Aggressively override text styles */
+  .name {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    margin: 0 0 6px 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .title {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    margin: 0 0 6px 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .description {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin: 10px auto 0 auto !important;
+    text-align: center !important;
+    max-width: 320px !important;
+    width: 100% !important;
+  }
+  
+  /* Work Section Mobile */
+  .section-title {
+    font-size: 28px !important;
+    margin-bottom: 30px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-top: 20px !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Better fix for project cards - ensure they use full width */
+  .work-section .container {
+    padding: 0 8px !important;
+  }
+  
+  .project-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Project Cards Mobile - Simple fix for cutting */
+  .project-content {
+    padding: 24px !important;
+  }
+  
+  .project-title {
+    font-size: 20px !important;
+  }
+  
+  .project-subtitle {
+    font-size: 16px !important;
+  }
+  
+  .project-description {
+    font-size: 15px !important;
+  }
+  
+  .project-year {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .project-arrow {
+    bottom: 24px;
+    right: 24px;
+  }
+  
+  /* Contact Section Mobile */
+  .contact-section {
+    padding: 40px 0;
+  }
+  
+  .contact-content h2 {
+    font-size: 28px !important;
+  }
+  
+  .contact-content p {
+    font-size: 16px !important;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .contact-link {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+  
+  /* Case Study Mobile - AGGRESSIVE content containment fixes */
+  .content-section {
+    padding: 40px 0;
+  }
+  
+  .content-section h2,
+  .content-main h2 {
+    font-size: 24px !important;
+    margin: 32px 0 20px 0;
+  }
+  
+  .content-section h3,
+  .content-main h3 {
+    font-size: 20px !important;
+  }
+  
+  .content-section p,
+  .content-main p,
+  .content-main li {
+    font-size: 16px !important;
+  }
+  
+  .project-details-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .hero-image-container {
+    width: 95%;
+    border-radius: 8px;
+  }
+  
+  .hero-image-container img {
+    max-height: 300px;
+  }
+  
+  /* Grids Mobile */
+  .methodology-grid,
+  .creativity-types-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .study-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .method-card,
+  .creativity-type-card {
+    padding: 20px;
+  }
+  
+  .system-overview-section,
+  .user-interface-section,
+  .creativity-analysis-section,
+  .similarity-patterns-section,
+  .interaction-behavior-section,
+  .thematic-analysis-section,
+  .educational-impact-section,
+  .technical-contribution-section {
+    padding: 20px;
+    margin: 24px 0;
+  }
+}
+
+/* TABLET RESPONSIVE STYLES */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px !important;
+  }
+  
+  .project-content {
+    padding: 32px !important;
+  }
+  
+  .project-title {
+    font-size: 24px !important;
+  }
+  
+  .project-subtitle {
+    font-size: 18px !important;
+  }
+  
+  .name {
+    font-size: 48px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .description {
+    font-size: 18px;
+  }
+}
+
+/* DESKTOP RESPONSIVE STYLES */
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 500px) !important;
+    gap: 40px !important;
+    max-width: 1100px !important;
+    margin: 40px auto !important;
+  }
+  
+  .project-content {
+    padding: 48px !important;
+  }
+  
+  .project-title {
+    font-size: 32px !important;
+  }
+  
+  .project-subtitle {
+    font-size: 20px !important;
+  }
+  
+  .project-description {
+    font-size: 18px !important;
+  }
+  
+  .project-arrow {
+    bottom: 48px;
+    right: 48px;
+  }
+}
+
+/* MOBILE LINKEDIN CONTACT FIX - MAXIMUM SPECIFICITY */
+@media (max-width: 768px) {
+  /* REMOVE THE DUPLICATE CONTACT INFO PSEUDO-ELEMENTS */
+  .title::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  .header-text::after {
+    display: none !important;
+    content: none !important;
+  }
+  
+  /* Use the most specific selectors possible to override hiding rules */
+  body .header .container .header-content .contact-info.portfolio-contact-override,
+  body .portfolio-contact-override,
+  html body .header .container .header-content .contact-info.portfolio-contact-override {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    background: rgba(224, 247, 255, 0.95) !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    margin: 8px auto !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    max-width: 280px !important;
+    font-size: 12px !important;
+    position: relative !important;
+    z-index: 9999 !important;
+  }
+  
+  /* Make sure all elements inside are visible and functional */
+  body .header .container .header-content .contact-info.portfolio-contact-override *,
+  body .header .container .header-content .contact-info.portfolio-contact-override span,
+  body .header .container .header-content .contact-info.portfolio-contact-override a,
+  body .header .container .header-content .contact-info.portfolio-contact-override div,
+  html body .portfolio-contact-override *,
+  html body .portfolio-contact-override a {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    align-items: center !important;
+    gap: 4px !important;
+    font-size: 12px !important;
+    padding: 2px 0 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+  
+  /* Specifically target LinkedIn link with maximum specificity */
+  body .header .container .header-content .contact-info.portfolio-contact-override a[href*="linkedin"],
+  html body .portfolio-contact-override a[href*="linkedin"],
+  body .header .container .header-content .contact-info.portfolio-contact-override a[href*="linkedin.com"] {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    color: #1a1a1a !important;
+    text-decoration: none !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10001 !important;
+  }
+  
+  /* Hover states */
+  body .header .container .header-content .contact-info.portfolio-contact-override a:hover,
+  html body .portfolio-contact-override a:hover {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  /* Make sure SVG icons are visible with maximum specificity */
+  body .header .container .header-content .contact-info.portfolio-contact-override svg,
+  html body .portfolio-contact-override svg {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 14px !important;
+    height: 14px !important;
+    color: #1a1a1a !important;
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+  
+  /* Remove any conflicting rules */
+  .header svg:not(.portfolio-contact-override svg),
+  .header circle:not(.portfolio-contact-override circle),
+  .header ellipse:not(.portfolio-contact-override ellipse),
+  .header path:not(.portfolio-contact-override path),
+  .header rect:not(.portfolio-contact-override rect) {
+    display: none !important;
+  }
+  
+  /* Ensure the contact info container is not affected by general hiding rules */
+  .header .contact-info.portfolio-contact-override,
+  .portfolio-contact-override {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+/* SAFE MOBILE IMAGE FIXES */
+@media (max-width: 768px) {
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Global image containment */
+  img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  
+  /* Hero image fixes */
+  .hero-image-section {
+    width: 100%;
+    padding: 20px 8px;
+    box-sizing: border-box;
+  }
+  
+  .hero-image-container {
+    max-width: calc(100vw - 32px);
+    width: calc(100vw - 32px);
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .hero-image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    box-sizing: border-box;
+  }
+  
+  /* Project card images */
+  .project-image-container {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .project-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+}
+
+/* ADD ONLY THIS TO THE BOTTOM OF YOUR EXISTING APP.CSS */
+
+/* Fix mobile image overflow and pink borders */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Global image containment */
+  img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  
+  /* Fix project cards border issue */
+  .project-card {
+    border: 1px solid #f0f0f0 !important;
+  }
+  
+  /* Hero image specific fix for case studies */
+  .hero-image-container {
+    max-width: calc(100vw - 32px);
+    width: calc(100vw - 32px);
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .hero-image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+  }
+  
+  /* Case study containers */
+  .case-study .container {
+    max-width: 100vw;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Full width images */
+  .full-width-image-container {
+    max-width: calc(100vw - 32px);
+    width: calc(100vw - 32px);
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .full-width-image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+
+/* SIMPLE CASE STUDY MOBILE FIXES - ADD TO END OF APP.CSS */
+@media (max-width: 768px) {
+  /* Clear previous conflicting rules and set consistent fonts */
+  .case-study .design-solution h3 {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+  }
+  
+  .case-study .design-solution h4 {
+    font-size: 18px !important; 
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+  }
+  
+  .case-study .design-solution p,
+  .case-study .design-solution li {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+  
+  /* Remove extra white space from last section only */
+  .case-study .design-solution:last-child {
+    margin-bottom: -20px !important;
+  }
+  
+  .case-study .impact-section {
+    padding-bottom: 30px !important;
+  }
+  
+  /* Basic mobile layout */
+  .case-study .container {
+    padding: 0 16px !important;
+    overflow-x: hidden !important;
+  }
+  
+  .case-study .solution-content {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* FINAL MOBILE IMAGE FIX - Replace the duplicate sections at the end with this */
+@media (max-width: 768px) {
+  /* Force reduce project card image height with maximum specificity */
+  .work-section .projects-grid .project-card .project-image-container {
+    height: 160px !important; /* Significantly reduced from 280px */
+    min-height: 160px !important;
+    max-height: 160px !important;
+    background: white !important;
+  }
+  
+  /* Fix pink artifact and ensure proper image sizing */
+  .work-section .projects-grid .project-card .project-image {
+    background: #f5f5f5 !important; /* No pink gradient */
+    height: 160px !important;
+  }
+  
+  .work-section .projects-grid .project-card .project-image-container .project-img {
+    height: 160px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+    display: block !important;
+    background: white !important;
+  }
+}
+
+/* ADD THIS TO YOUR APP.CSS - BEHAVIOR IMAGES GRID FIX */
+
+/* Behavior Images Grid - Fixed Layout for Figures 5a and 5b */
+.behavior-images-grid-fixed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 24px 0;
+  align-items: start;
+}
+
+.behavior-scatter-fixed,
+.behavior-table-fixed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.behavior-scatter-fixed img,
+.behavior-table-fixed img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  object-fit: contain !important;
+  background: white !important;
+}
+
+.behavior-scatter-fixed .image-caption,
+.behavior-table-fixed .image-caption {
+  font-size: 14px !important;
+  color: #666 !important;
+  text-align: center !important;
+  margin-top: 8px !important;
+  font-style: italic !important;
+  line-height: 1.4 !important;
+}
+
+/* MOBILE RESPONSIVE FOR BEHAVIOR IMAGES */
+@media (max-width: 768px) {
+  .behavior-images-grid-fixed {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    margin: 16px 0 !important;
+  }
+  
+  .behavior-scatter-fixed img,
+  .behavior-table-fixed img {
+    width: 100% !important;
+    max-width: calc(100vw - 64px) !important;
+    height: auto !important;
+    border-radius: 6px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  .behavior-scatter-fixed .image-caption,
+  .behavior-table-fixed .image-caption {
+    font-size: 13px !important;
+    margin-top: 6px !important;
+    padding: 0 8px !important;
+  }
+}
+
+/* TABLET RESPONSIVE FOR BEHAVIOR IMAGES */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .behavior-images-grid-fixed {
+    gap: 20px;
+  }
+  
+  .behavior-scatter-fixed img,
+  .behavior-table-fixed img {
+    max-width: 95% !important;
+  }
+}
+
+/* ADD THIS TO THE VERY END OF YOUR App.css FILE */
+
+/* OVERRIDE REACT COMPONENT INLINE STYLES ON MOBILE */
+@media (max-width: 768px) {
+  /* Target the React components specifically and override their inline styles */
+  .case-study .solution-visual > div[style*="fontFamily"] {
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+  
+  /* Override all text inside React components */
+  .case-study .solution-visual div[style*="fontSize"] {
+    font-size: 14px !important;
+  }
+  
+  /* Override large text specifically */
+  .case-study .solution-visual div[style*="fontSize: 16px"],
+  .case-study .solution-visual div[style*="fontSize: 18px"],
+  .case-study .solution-visual div[style*="fontSize: 20px"] {
+    font-size: 14px !important;
+  }
+  
+  /* Override very small text */
+  .case-study .solution-visual div[style*="fontSize: 6px"],
+  .case-study .solution-visual div[style*="fontSize: 7px"],
+  .case-study .solution-visual div[style*="fontSize: 8px"],
+  .case-study .solution-visual div[style*="fontSize: 9px"] {
+    font-size: 12px !important;
+  }
+  
+  /* Force text outside React components to be consistent */
+  .case-study .design-solution .solution-text,
+  .case-study .design-solution .solution-header {
+    font-size: 14px !important;
+  }
+  
+  .case-study .design-solution .solution-text p,
+  .case-study .design-solution .solution-text li {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .case-study .design-solution .solution-text li strong {
+    font-size: 14px !important;
+  }
+  
+  .case-study .design-solution h3 {
+    font-size: 20px !important;
+  }
+  
+  .case-study .design-solution h4 {
+    font-size: 18px !important;
+  }
+  
+  /* Prevent any container overflow */
+  .case-study .design-solution {
+    overflow: hidden !important;
+  }
+  
+  .case-study .solution-content {
+    overflow: hidden !important;
+  }
+}
+
+/* ADD THIS TO THE END OF YOUR App.css FILE */
+
+/* MOBILE FIGURE SIZE ADJUSTMENTS FOR CSP CASE STUDY - SPECIFIC TARGETING */
+@media (max-width: 768px) {
+  /* Figure 1: System Architecture - target by image src */
+  .prototype-image img[src="/images/CSP/system-architecture.png"] {
+    width: 95% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Figure 2: Interface Components - target by image src */
+  .prototype-image img[src="/images/CSP/interface-components.png"] {
+    width: 90% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Figure 4: Creativity Distribution - target by image src */
+  .prototype-image img[src="/images/CSP/creativity-distribution.png"] {
+    width: 90% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Alternative targeting by container class if above doesn't work */
+  .system-overview-section .prototype-image.system-arch-image img,
+  .user-interface-section .prototype-image.medium-image img,
+  .similarity-patterns-section .prototype-image.medium-image img {
+    width: 90% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  /* Most specific targeting - by parent section */
+  .system-overview-section .prototype-image img {
+    width: 95% !important;
+  }
+  
+  .user-interface-section .prototype-image img {
+    width: 90% !important;
+  }
+  
+  .similarity-patterns-section .prototype-image img {
+    width: 90% !important;
+  }
+  
+  /* Ensure proper spacing */
+  .prototype-image {
+    margin: 20px 0 !important;
+  }
+  
+  /* Caption sizing */
+  .prototype-image .image-caption {
+    font-size: 13px !important;
+    margin-top: 8px !important;
+    padding: 0 8px !important;
+    text-align: center !important;
+  }
+}
+
+
+
+
+/* MOBILE FIX - Hide overlay on touch devices */
+@media (max-width: 768px) {
+  .project-overlay {
+    display: none !important;
+  }
+  
+  .project-image,
+  .project-image-container {
+    background: #f5f5f5 !important;
+  }
+
+  /* Fix empty space below images */
+  .project-image-container {
+    height: auto !important;
+    min-height: 180px;
+  }
+
+  .project-image {
+    height: auto !important;
+  }
+
+  .project-img {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+}
